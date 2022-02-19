@@ -1,0 +1,34 @@
+{% extends 'base.html'%}
+
+{% block head %}
+<title>APPLICATION</title>
+{% endblock %}
+
+{% block body %}
+<div class="content" class="s">
+    <h1>Task Master</h1>
+    <table class="content" style="width:100%">
+        <tr>
+            <th class="content">Task</th>
+            <th class="content">Added</th>
+            <th class="content">Action</th>
+        </tr>
+        {% for task in tasks %}
+        <tr>
+            <td class="a">{{task.content}}</td>
+            <td class="a">{{task.date_created.date()}}</td>
+            <td class="content">
+                <a href="/delete/{{task.id}}">Delete</a>
+                <br>
+                <a href="/update/{{task.id}}">Update</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <form action="/" method="POST">
+        <input type="text" name="content" id="content" class="g">
+        <input type="submit" value="Add Task" class="g">
+
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+
+.content{
+
+
+    border:1px solid black;
+}
+.s{
+    width: 100%;
+}
+.a{
+    border:1px solid black;
+    justify-content: center;
+    align-items: center;
+    padding-left: 150px;
+}
+body{
+
+    background-color: skyblue;
+}
+.g{
+
+   justify-content: center;
+   align-items: center;
+
+}
